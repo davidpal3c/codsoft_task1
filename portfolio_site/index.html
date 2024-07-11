@@ -1,13 +1,594 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+
+    <!--=============== Remixicons ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <!-- =============== Bootstrap-Rev ===============
+    <link href="https://cdn.jsdelivr.net/npm/bootstraprev/bootstrap-rev.min.css" rel="stylesheet" />
+     -->
+
+
+    <!--=============== Swiper Css ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--=============== Css ===============-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/skins/color-1.css" />
+
+    <!--=============== Skin Colors ===============-->
+    <link rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1" disabled />
+    <link rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled />
+
+    <title>David's Portfolio --Software Dev.</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!--=============== Header ===============-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#home" class="nav__link active-link">Hello</a>
+            </li>
+
+            <li>
+              <a href="#services" class="nav__link">Services</a>
+            </li>
+
+            <li>
+              <a href="#resume" class="nav__link">Resume</a>
+            </li>
+
+            <li>
+              <a href="#portfolio" class="nav__link">Portfolio</a>
+            </li>   
+            
+            <li>
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>   
+          </ul>
+
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-fill"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== Main ===============-->
+    <main class="main">
+      <!--=============== Home ===============-->
+      <section class="home" id="home">
+        <div class="home__container container grid">
+          <img src="assets/img/bg.jpg" alt="profile-photo" class="home__img" />
+          <div class="home__data">
+            <h1 class="home__name">David Palacios</h1>
+            <p class="home__work">Frontend Developer, Software Developer</p>
+            <dl class="home__list">
+              <dt>PHONE:</dt>
+              <dd>+1(825) 558-0963</dd>
+              <dt>EMAIL:</dt>
+              <dd>davidpal3c@gmail.com</dd>
+              <dt>LOCATION:</dt>
+              <dd>Calgary, AB. Canada</dd>             
+            </dl>
+            <div class="home__social">
+              <a href="https://github.com/davidpal3c" target="_blank" class="home__social-link">
+                <i class="ri-github-fill"></i>
+              </a>
+              <a href="https://linkedin.com/in/david-palacios-9077a2223/" target="_blank" class="home__social-link">
+                <i class="ri-linkedin-box-fill"></i>
+              </a>
+              <a href="mailto:davidpal3c@gmail.com" target="_blank" class="home__social-link">
+                <i class="ri-mail-line"></i>
+              </a>
+              <!-- <a href="" target="_blank" class="homme__social-link">
+                <i class="ri-medium-fill"></i>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </section>     
+
+      
+
+
+      <!--=============== Hello ===============-->
+      <section class="hello section container">
+        <h2 class="section__title">Hi_</h2>
+        <p class="hello_details text-lg">
+          I am Junior Web developer able to build a Web presence from the ground up - from concept, navigation, layout and programming to UX and SEO. Skilled at writing well-designed, testable and efficient code using current best practices in Web development. Fast learner, hard worker and team player who is proficient in an array of scripting languages and multimedia Web tools.
+        </p>
+        <a href="assets/img/blank-cv.pdf" class="button button--flex text-sm">
+          <i class="ri-download-line"> DOWNLOAD CV</i>
+        </a>
+      </section> 
+
+      <!--=============== Services ===============-->
+      <section class="services section container" id="services">
+        <h2 class="section__title">Services_</h2>
+
+        <div class="services__container grid">
+          <div class="services__item">
+            <div class="icon__box">
+              <img src="assets/img/web-design.png" alt="" class="services__icon">
+              <div class="services__dot">
+                <span class="dot" id="dot"></span>
+              </div>
+            </div>
+            <h3 class="services__title text-lg">FRONTEND DEVELOPMENT</h3>
+            <div class="services__detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quod odio nobis dolores ipsam, corporis officiis totam laboriosam hic atque veritatis culpa, at accusantium quia sit perferendis.</div>
+          </div>
+
+          <div class="services__item">
+            <div class="icon__box">
+              <img src="assets/img/smartphone-call.png" alt="" class="services__icon">
+              <div class="services__dot">
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3 class="services__title text-lg">RESPONSIVE DESIGN</h3>
+            <div class="services__detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quod odio nobis dolores ipsam, corporis officiis totam laboriosam hic atque veritatis culpa, at accusantium quia sit perferendis.</div>
+          </div>
+
+
+          <div class="services__item">
+            <div class="icon__box">
+              <img src="assets/img/laptop.png" alt="" class="services__icon">
+              <div class="services__dot">
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3 class="services__title text-lg">WEB DEVELOPMENT</h3>
+            <div class="services__detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quod odio nobis dolores ipsam, corporis officiis totam laboriosam hic atque veritatis culpa, at accusantium quia sit perferendis.</div>
+          </div>
+
+          <div class="services__item">
+            <div class="icon__box">
+              <img src="assets/img/paint-palette.png" alt="" class="services__icon">
+              <div class="services__dot">
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3 class="services__title text-lg">DATABASE DEVELOPMENT</h3>
+            <div class="services__detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quod odio nobis dolores ipsam, corporis officiis totam laboriosam hic atque veritatis culpa, at accusantium quia sit perferendis.</div>
+          </div>
+
+          <div class="services__item">
+            <div class="icon__box">
+              <img src="assets/img/verified.png" alt="" class="services__icon">
+              <div class="services__dot">
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3 class="services__title text-lg">BACKEND DEVELOPMENT</h3>
+            <div class="services__detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quod odio nobis dolores ipsam, corporis officiis totam laboriosam hic atque veritatis culpa, at accusantium quia sit perferendis.</div>
+          </div>
+
+          <div class="services__item">
+            <div class="icon__box">
+              <img src="assets/img/operator.png" alt="" class="services__icon">
+              <div class="services__dot">
+                <span class="dot"></span>
+              </div>
+            </div>
+            <h3 class="services__title text-lg">24/7 SUPPORT</h3>
+            <div class="services__detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quod odio nobis dolores ipsam, corporis officiis totam laboriosam hic atque veritatis culpa, at accusantium quia sit perferendis.</div>
+          </div>
+
+
+        </div>
+      </section>
+      <!--=============== Resume ===============-->
+
+      <section class="resume section container full-width" id="resume">
+        <div class="resume-content">
+          <h2 class="section__title">Resume_</h2>
+
+          <div class="resume__container grid">
+            <div class="resume__data">
+              <h3 class="resume__title text-sm">EDUCATION & CERTIFICATIONS</h3>
+
+              <div class="resume__item">
+                <h3 class="resume__subtitle text-sm">SOUTHERN ALBERTA INSTITUTE OF TECHNOLOGY (SAIT)</h3>
+                <p class="resume__date text-sm">2024-2025</p>
+                <p class="resume__description text-lg">Software Development Diploma</p>
+              </div>
+
+              <div class="resume__item">
+                <h3 class="resume__subtitle text-sm">GOOGLE IT CERTIFICATES</h3>
+                <p class="resume__date text-sm">2023</p>
+                <p class="resume__description text-lg">IT Support Professional Certificate</p>
+              </div>
+
+              <div class="resume__item">
+                <h3 class="resume__subtitle text-sm">COMIT.ORG</h3>
+                <p class="resume__date text-sm">2023</p>
+                <p class="resume__description text-lg">Python For Web Development Certificate</p>
+              </div>
+
+            </div>
+
+            <div class="resume__data">
+              <h3 class="resume__title text-sm">EMPLOYMENT</h3>
+
+              <div class="resume__item">
+                <h3 class="resume__subtitle text-sm">CODSOFT</h3>
+                <p class="resume__date text-sm">2024</p>
+                <p class="resume__description text-lg">JavaScript Developer Intern</p>
+              </div>
+
+              <div class="resume__item">
+                <h3 class="resume__subtitle text-sm">SOUTHERN ALBERTA INSTITUTE OF TECHNOLOGY (SAIT)</h3>
+                <p class="resume__date text-sm">2024</p>
+                <p class="resume__description text-lg">Full Stack Developer Student</p>
+              </div>
+
+              <div class="resume__item">
+                <h3 class="resume__subtitle text-sm">UXICORNS CLUB (SAIT)</h3>
+                <p class="resume__date text-sm">2024</p>
+                <p class="resume__description text-lg">Vice-President of Finance</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!--=============== Skills ===============-->
+      <section class="section container">
+        <h2 class="section__title">Skills_</h2>
+
+        <div class="skills__container grid">
+          <div class="skills__content">
+            <h3 class="skills__title text-sm">FRONTEND</h3>
+            
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">HTML</p>
+                  <span class="skills__number text-sm">90%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 90%"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">CSS</p>
+                  <span class="skills__number text-sm">80%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 80%"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">JavaScript</p>
+                  <span class="skills__number text-sm">60%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 60"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">React</p>
+                  <span class="skills__number text-sm">50%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 50%"></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="skills__content">
+            <h3 class="skills__title text-sm">BACKEND</h3>
+            
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">Django</p>
+                  <span class="skills__number text-sm">70%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 70%"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">Python</p>
+                  <span class="skills__number text-sm">80%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 80%"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">C#</p>
+                  <span class="skills__number text-sm">65%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 65%"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">.NET</p>
+                  <span class="skills__number text-sm">60%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 60%"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <p class="skills__name text-sm">SQL (Oracle, PostgreSQL)</p>
+                  <span class="skills__number text-sm">70%</span>
+                </div>
+
+                <div class="skills__bar">
+                  <span class="skills__percentage" style="width: 70%"></span>
+                </div>
+              </div>
+             
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--=============== Projects ===============-->
+      <section class="work section container" id="portfolio">
+        <h2 class="section__title">Work_</h2>
+
+        <div class="project__categories">
+          <button class="category__btn text-xs active-work" data-filter="all">ALL</button>
+          <button class="category__btn text-xs" data-filter=".web">WEB DEVELOPMENT</button>
+          <button class="category__btn text-xs" data-filter=".app">MOBILE APPS</button>
+          <button class="category__btn text-xs" data-filter=".sdev">SOFTWARE DEVELOPMENT</button>
+        </div>
+
+        <div class="projects__container grid">
+          <div class="project__item grid mix app">
+            <img src="assets/img/project-1.png" alt="" class="project__img">
+
+            <div class="project__data">
+              <h3 class="project__title text-lg">MOBILE AND DESKTOP APP FOR LONDON HOSTEL STORE</h3>
+              <p class="project__description">Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham.</p>
+              <h4 class="project__stack text-xs">USED STACK:</h4>
+              <ul class="tags text-sm">
+                <li>html5</li>
+                <li>css3</li>
+                <li>JavaScript</li>
+                <li>Django</li>
+                <li>React Native</li>
+                <li>React</li>
+              </ul>
+
+              <a href="" class="project__link text-sm">www.appsite.ca</a>
+            </div>
+          </div>
+
+          <div class="project__item grid mix app sdev">
+            <img src="assets/img/project-2.png" alt="" class="project__img">
+
+            <div class="project__data">
+              <h3 class="project__title text-lg">FLIGHT RESERVATION WEB/MOBILE APP</h3>
+              <p class="project__description">Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham.</p>
+              <h4 class="project__stack text-xs">USED STACK:</h4>
+              <ul class="tags text-sm">
+                <li>html5</li>
+                <li>css3</li>
+                <li>JavaScript</li>
+                <li>C#</li>
+                <li>.NET</li>
+                <li>Maui / Razor-Hybrid</li>
+              </ul>
+
+              <a href="" class="project__link text-sm">www.appsite.ca</a>
+            </div>
+          </div>
+
+          <div class="project__item grid mix web">
+            <img src="assets/img/project-3.png" alt="" class="project__img">
+
+            <div class="project__data">
+              <h3 class="project__title text-lg">EVENT MANAGEMENT APP</h3>
+              <p class="project__description">Do answered bachelor occasion in of offended no concerns. Supply worthy warmth branch of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham.</p>
+              <h4 class="project__stack text-xs">USED STACK:</h4>
+              <ul class="tags text-sm">
+                <li>html5</li>
+                <li>css3</li>
+                <li>JavaScript</li>
+                <li>Bootstrap5</li>
+                <li>Django</li>
+                <li>PostgreSQL</li>
+              </ul>
+
+              <a href="" class="project__link text-sm">www.appsite.ca</a>
+            </div>
+        
+          </div>
+        </div>            
+      </section>
+
+      <!--=============== Testimonials ===============-->
+      <section class="testimonials section">
+        <div class="testimonial__bg">
+          <div class="testimonial__icon">
+            <i class="ri-double-quotes-r"></i>
+          </div>
+        
+
+          <div class="swiper testimonial__container container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonial__item">
+                <h3 class="author__name text-lg">Helder Oliveira</h3>
+                <p class="author__project">Flight Reservation Hybrid Application</p>
+                <div class="ruler"></div>
+                <p class="testimonial__description text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eos. Beatae, qui, numquam quas doloribus, corrupti totam vitae culpa et hic pariatur repellat enim facere voluptates consectetur deserunt doloremque dolor omnis cum quisquam harum ea. Eius possimus eos adipisci obcaecati ipsa accusamus nulla cumque sint!</p>
+              </div>
+
+              <div class="swiper-slide testimonial__item">
+                <h3 class="author__name text-lg">Jason Zhang</h3>
+                <p class="author__project">SQL Database for Student Management System</p>
+                <div class="ruler"></div>
+                <p class="testimonial__description text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eos. Beatae, qui, numquam quas doloribus, corrupti totam vitae culpa et hic pariatur repellat enim facere voluptates consectetur deserunt doloremque dolor omnis cum quisquam harum ea. Eius possimus eos adipisci obcaecati ipsa accusamus nulla cumque sint!</p>
+              </div>
+
+              <div class="swiper-slide testimonial__item">
+                <h3 class="author__name text-lg">Helder Oliveira</h3>
+                <p class="author__project">Flight Reservation Hybrid Application</p>
+                <div class="ruler"></div>
+                <p class="testimonial__description text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eos. Beatae, qui, numquam quas doloribus, corrupti totam vitae culpa et hic pariatur repellat enim facere voluptates consectetur deserunt doloremque dolor omnis cum quisquam harum ea. Eius possimus eos adipisci obcaecati ipsa accusamus nulla cumque sint!</p>
+              </div>
+            </div>
+
+            <div class="swiper-button-next">
+              <img src="assets/img/arrow-next.svg" alt="">
+            </div>
+            <div class="swiper-button-prev">
+              <img src="assets/img/arrow-prev.svg" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--=============== Blog ===============-->
+      <section class="blog section container" id="blog">
+        <h2 class="section__title">Latest Posts_</h2>
+
+        <div class="posts__container grid">
+          <div class="post__card">
+            <img src="assets/img/blog-1.png" alt="" class="post__img">
+
+            <div class="post__content">
+              <p class="post__date text-xs">March 31, 2024</p>
+              <h3 class="post__title text-sm">MASTERING AJAX REQUESTS AND RENDERING</h3>
+              <p class="post__description text-sm">Hey Django enthusiasts! Today, we're delving into the dynamic world of AJAX within Django. AJAX lets us fetch data from the server without reloading the entire webpage, making our apps more responsive and user-friendly...</p>
+            </div>
+          </div>
+
+          <div class="post__card">
+            <img src="assets/img/blog-1.png" alt="" class="post__img">
+
+            <div class="post__content">
+              <p class="post__date text-xs">March 20, 2024</p>
+              <h3 class="post__title text-sm">18 PRINCIPLES FOR SOCIALLY AND ENVIRONMENTALLY CONSCIOUS SOFTWARE</h3>
+              <p class="post__description text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quisquam harum recusandae accusantium beatae dolorem? Dolor temporibus dicta magnam repellat perferendis...</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!--=============== Contact ===============-->
+      <section class="contact section" id="contact">
+        <div class="contact__content container">
+          <h2 class="section__title">Get in touch_</h2>
+
+          <div class="contact__container grid">
+            <div class="contact__info">
+              <dl class="contact__list">
+                <dt>Phone:</dt>
+                <dd>+1(825) 558-0963</dd>
+                <dt>Discord:</dt>
+                <dd>yugen_9</dd>
+                <dt>Email:</dt>
+                <dd>davidpal3c@gmail.com</dd>              
+              </dl>
+
+              <ul class="contact__socials">
+                <li>
+                  <a href="https://www.linkedin.com/in/david-palacios-9077a2223/" class="contact__social-link">LinkedIn</a>
+                </li>
+                <li>
+                  <a href="https://github.com/davidpal3c" class="contact__social-link">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://medium.com/@davidpal3c" class="contact__social-link">Medium</a>
+                </li>
+
+              </ul>
+            </div>
+
+            <div class="contact__form">
+              <p class="contact__form-title">Or just write me a message here_</p>
+
+              <form action="" id="contact-form">
+                <div class="contact__input-div">
+                  <input type="text" name="name" placeholder="Your name" class="contact__input" id="contact-name">
+                </div>
+                <div class="contact__input-div">
+                  <input type="email" name="email" placeholder="Your e-mail" class="contact__email" id="contact-email">
+                </div>
+                <div class="contact__input-div">
+                  <textarea name="message" placeholder="Type your message here" class="contact__input textarea" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <p class="contact__message text-sm" id="contact-message">Message</p>
+                <button type="submit" class="button contact__button">SEND</button>
+              </form>
+                            
+              <p class="footer__copy">&copy; 2024 David Palacios. All Rights Reserved</p>       
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== Style Switcher ===============-->
+    <div class="style__switcher"></div>
+
+    <!--=============== Mixitup ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== Swiper Js ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== Email Js ===============-->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+
+    <!--=============== Js ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== Common ===============-->
+    <script src="assets/js/common.js"></script>
   </body>
 </html>
