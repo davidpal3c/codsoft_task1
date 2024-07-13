@@ -393,6 +393,7 @@ input {
   border: 1px solid var(--border-color);
   padding: 2.5rem 1.25rem 1.875rem;
   text-align: center;
+  transition: 0.5s ease;
 }
 
 .icon__box {
@@ -424,7 +425,6 @@ input {
 .services__item:hover .services__dot { 
   animation-play-state: running; 
   color: var(--border-color-alt);
-  transition: 0.5s;
 }
 
 .services__item:hover .dot {
@@ -437,6 +437,7 @@ input {
   background-color: var(--bg-color-alt);
   color: var(--border-color-alt);
   opacity: 0.9;
+  transform: scale(1.06);
 }
 
 
