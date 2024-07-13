@@ -171,27 +171,33 @@ input {
 /*=============== Header ===============*/
 
 .header {
-  position: absolute;
+  position: fixed;
+  background: var(--title-color);
+  height: 5rem;
   top: 0;
   left: 0;
+  padding-bottom: 2rem 9%;
   width: 100%;
   z-index: 100;
+
 }
 
 .nav {
   height: calc(var(--header-height) + 0.875rem);
   display: flex;  
-  align-items: flex-end;
+  align-items: center;
+  justify-content: end;
 }
 
 .nav__list {
   display: flex;  
   column-gap: 3.25rem;
+  margin-top: 1rem;
 }
 
 .nav__link {
   color: var(--text-color-alt);
-  font-size: 0.9rem;  
+  font-size: 1rem;  
   font-weight: var(--bold);
   font-family: var(--mono-font);
   text-transform: uppercase;
@@ -200,7 +206,7 @@ input {
 }
 
 .nav__link:hover {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .nav__link::after {
@@ -210,7 +216,7 @@ input {
   right: -0.5rem;
   width: 7px;
   height: 2px; 
-  background-color: #fff;
+  background-color: var(--bg-color);
   opacity: 0;
   transition: 0.3s;
 }
@@ -391,6 +397,7 @@ input {
 
 .services__item {
   border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
   padding: 2.5rem 1.25rem 1.875rem;
   text-align: center;
   transition: 0.5s ease;
@@ -466,12 +473,15 @@ input {
   margin-bottom: 0.8em;
 }
 
+
+
 /*=============== Resume ===============*/
 .resume {
   background: var(--bg-color-alt);
   background-size: cover;
   background-position: 50%;
   padding-top: 5.5rem; 
+  margin-top: 2rem;
   margin-bottom: 2.5rem;
   position: relative;
   margin-top: 3em;  
@@ -582,6 +592,14 @@ input {
 
 
 /*=============== Projects ===============*/
+
+.work{
+  margin-top: 3rem;
+}
+
+.section__title {
+  margin-top: 2rem;
+}
 
 .project__categories {
   display: flex;
@@ -716,10 +734,13 @@ input {
   padding: 0 5.75rem;
 }
 
+
+.author__project {
+  color: var(--border-color-alt);
+}
 .testimonial__description,
-.author__project,
 .author__name {
-  color: #fff;
+  color: var(--bg-color);
 }
 
 .author__name {
@@ -742,7 +763,8 @@ input {
 .ruler {
   width: 100%;
   height: 1px;
-  background-color: #a98a79;
+  background-color: var(--border-color-alt);
+  margin-top: -0.5rem;
   margin-bottom: 1.25rem;
 } 
 
@@ -780,6 +802,10 @@ input {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.875rem;
   margin-bottom: 2.5rem;
+}
+
+.post__card {
+  border-radius: 1rem;
 }
 
 .post__img {
@@ -870,6 +896,12 @@ input {
 
 .contact__social-link {  
   font-family: var(--roboto-font);
+  transition: 0.5s ease;
+}
+
+.contact__social-link:hover {  
+  font-size: 1.2rem;
+  color: var(--border-color-alt);  
 }
 
 .contact__form {
@@ -933,6 +965,7 @@ input {
 
 /*=============== Style Switcher ===============*/
 
+
 /*=============== BreakPoints ===============*/
 /* large devices */
 @media screen and (max-width: 1200px) {
@@ -941,13 +974,36 @@ input {
 @media screen and (max-width: 992px) {
 }
 
-/* medium devices */
 @media screen and (max-width: 768px) {
+  #services-grid-container,
+  .posts__container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
 
 @media screen and (max-width: 576px) {
+  #services-grid-container,
+  .posts__container {
+    grid-template-columns: none;     
+  }
+
+  .services__item {
+    font-size: 0.8rem; 
+    padding: 1.5rem 0.75rem 1rem; 
+   
+  }
+
+  .services__item:hover {
+    transform: scale(1.025);    
+  }  
+
+  .post__card {
+    padding: 1.5rem 0.75rem 1rem;
+    font-size: 0.8rem;    
+  }
 }
 
 /* small devices */
 @media screen and (max-width: 350px) {
+
 }
