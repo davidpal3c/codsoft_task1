@@ -6,13 +6,6 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /* --primary-color: #4a4a4a;
-  --primary-color-alt: #575757;
-  --linear-gradient: linear-gradient(
-    54deg, 
-    rgba(45, 45, 45, 0.95) 34%,
-    rgba(45, 45, 45, 0.95) */
-
 
   --primary-color: #2D3142;
   --primary-color-alt: #4F5D75;
@@ -22,12 +15,6 @@
     rgb(45, 49, 66)   
   );
 
-  /* --title-color: #4a4a4a;
-  --text-color: #555;
-  --text-color-alt: #999;
-  --bg-color: #fff;
-  --bg-color-alt: #e9ecef;
-  --border-color: #f1f1f1; */
 
   --title-color: #2D3142;
   --text-color: #4F5D75;
@@ -274,12 +261,27 @@ input {
 }
 
 .home__img {
-  width: 90%;
-  height: 380px;
+  width: 19rem;
+  height: auto;
   object-fit: cover;
   border-radius: 0.3rem;
-  transform: translateY(3.125rem);
-  box-shadow: 0 0 27px rgb(96 96 96 / 34%);
+  transform: translateY(3.125rem);  
+  animation: floatImage 6s ease-in-out infinite; 
+  margin-top: 1.3rem;
+  margin-left: 1rem;
+}
+
+
+@keyframes floatImage {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-1rem);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 
 .home__name,
@@ -425,7 +427,7 @@ input {
   top: 0;
   width: 100%;
   height: 100%;    
-  animation: service-dot 2s linear infinite;
+  animation: service-dot 2.5s linear infinite;
   animation-play-state: paused;
 } 
 
@@ -435,7 +437,7 @@ input {
 }
 
 .services__item:hover .dot {
-  color: var(--bg-color);
+  background-color: var(--bg-color);
   border: var(--bg-color);
 }
 
@@ -510,6 +512,7 @@ input {
 .resume__container {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 3.75rem;
+  margin-bottom: 4rem;
 }
 
 .resume__title {
@@ -560,34 +563,23 @@ input {
 /*=============== Skills ===============*/ 
 
 .skills__container {
-  grid-template-columns: repeat(2, 445px);
-  column-gap: 7rem;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.875rem;
 }
 
 .skills__list {
-  row-gap: 1.8rem;
+  display: flex;  
+  column-gap: 3.25rem;
+  margin-top: 1rem;
 }
 
-
-.skills__titles {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.625rem;
+.skills__title {
+  margin-top: 10rem;
 }
 
-.skills__bar, 
-.skills__percentage {
-  height: 5px;
-  border-radius: 0.25rem;
-}
-
-.skills__bar {
-  background-color: var(--bg-color-alt);
-}
-
-.skills__percentage {
-  display: block;
-  background-color: var(--primary-color);
+.fixed-size {
+  /* width: 60px;
+  height: 60px; */
 }
 
 
@@ -794,27 +786,37 @@ input {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #fff;
+  background-color: var(--bg-color);
 }
 
 /*=============== Blog ===============*/
 .posts__container {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.875rem;
   margin-bottom: 2.5rem;
 }
 
 .post__card {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
 }
 
 .post__img {
-  vertical-align: middle;
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-top-left-radius: 0.5rem; 
+  border-top-right-radius: 0.5rem;
 }
 
 .post__content {
   border: 1px solid var(--border-color);
   padding: 1.25rem 1.875rem 2.5rem 1.25rem;
+  border-bottom-left-radius: 0.5rem; 
+  border-bottom-right-radius: 0.5rem;
 }
 
 .post__date {
@@ -828,7 +830,7 @@ input {
 }
 
 .post__description {
-  color: var(--text-color-alt);
+  color: var(--border-color);
   text-align: justify;
 }
 
@@ -871,7 +873,7 @@ input {
 .contact__email,
 .contact__form-title,
 .footer__copy {
-  color: #fff;
+  color: var(--bg-color);
   font-family: var(--mono-font);    
 }
 
@@ -972,6 +974,7 @@ input {
 }
 
 @media screen and (max-width: 992px) {
+
 }
 
 @media screen and (max-width: 768px) {
@@ -979,18 +982,33 @@ input {
   .posts__container {
     grid-template-columns: repeat(2, 1fr); 
   }
+
+  .fixed-size {
+    width: 300px;
+    height: auto;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
   #services-grid-container,
+  .resume__container,
   .posts__container {
     grid-template-columns: none;     
   }
 
+  /* .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 7rem;
+  } */
+
+  .resume-title2 {
+    margin-top: 4rem;
+  }
+
   .services__item {
     font-size: 0.8rem; 
-    padding: 1.5rem 0.75rem 1rem; 
-   
+    padding: 1.5rem 0.75rem 1rem;    
   }
 
   .services__item:hover {
@@ -1001,9 +1019,13 @@ input {
     padding: 1.5rem 0.75rem 1rem;
     font-size: 0.8rem;    
   }
+
 }
 
 /* small devices */
 @media screen and (max-width: 350px) {
 
 }
+
+
+

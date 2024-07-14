@@ -43,50 +43,48 @@ const contactForm = document.getElementById('contact-form'),
   Message = document.getElementById('message'),
   contactMessage = document.getElementById('contact-message');
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+const sendEmail = (e) => {
+  e.preventDefault();
 
-    //checks if field has a value
-    if (
-      contactName.value === '' ||
-      contactEmail.value === '' ||
-      Message.value === ''
-    ) {
-      // add and remove color
-      contactMessage.classList.remove('color-light');
-      contactMessage.classList.add('color-dark');
+  //checks if field has a value
+  if (
+    contactName.value === '' ||
+    contactEmail.value === '' ||
+    Message.value === ''
+  ) {
+    // add and remove color
+    contactMessage.classList.remove('color-light');
+    contactMessage.classList.add('color-dark');
 
-      // show message 
-      contactMessage.textContent = 'Write all the input fields';
-    } else {
-      // serviceID - templateID - #form - publickey
-      emailjs
-        .sendForm(
-          'service_4k2ftde',
-          'template_6xq1rcs',
-          'contact-form',
-          'MfiViteaw49cFtUt2'
-        )
-        .then(() => {
-          // show message and add color (window + dot to open emoji)
-          contactMessage.classList.add('color-light');
-          contactMessage.textContent = 'Message sent ✔️';
+    // show message 
+    contactMessage.textContent = 'Write all the input fields';
+  } else {
+    // serviceID - templateID - #form - publickey
+    emailjs.sendForm(
+      'service_4k2ftde',
+      'template_58u0rcv',
+      '#contact-form',
+      'MfiViteaw49cFtUt2'
+    )
+    .then(() => {
+      // show message and add color (window + dot to open emoji)
+      contactMessage.classList.add('color-light');
+      contactMessage.textContent = 'Message sent ✔️';
 
-          //remove message
-          setTimeout(() => {
-            contactMessage.textContent = '';
-          }, 5000);        
-        },
-        (error) => {
-          alert('OOPS! Something went wrong...', error)
-        });
+      //remove message
+      setTimeout(() => {
+        contactMessage.textContent = '';
+      }, 5000);        
+    },
+    (error) => {
+      alert('OOPS! Something went wrong...', error)
+    });
+    //clear input fields 
+    contactName.value = '';
+    contactEmail.value = '';
+    Message.value = '';
+  }
+};
 
-        //clear input fields 
-        contactName.value = '';
-        contactEmail.value = '';
-        Message.value = '';
-    }
-  };
-
-  contactForm.addEventListener('submit', sendEmail);
+contactForm.addEventListener('submit', sendEmail);
 
