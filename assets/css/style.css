@@ -380,8 +380,8 @@ input {
 .button:hover {
   background-color: var(--border-color-alt);
   color: var(--text-color);
-  width: 102%;
-  height: 102%;
+  /* width: 102%;
+  height: 102%; */
 }
 
 .button--flex {
