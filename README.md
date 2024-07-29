@@ -3,7 +3,7 @@
 -->> https://davidpal3c.github.io/codsoft_task1/
 
 ## 📖 Overview
-This is my personal portfolio website showcasing my work and skills, Junior Web Developer specializing in Frontend and Software Development. The website is designed to provide a comprehensive overview of my professional background, including his education, employment history, skills, projects, services, and a way to get in touch. It features a modern, responsive design that highlights David's expertise in various technologies and his ability to deliver high-quality web and software solutions.
+This is my personal portfolio website showcasing my work and skills, Junior Web Developer specializing in Frontend and Software Development. The website is designed to provide a comprehensive overview of my professional background, including education, employment history, skills, projects, services, and a way to get in touch. 
 
 ## 🚀 Features
 - **🏠 Home Section**: Introduces David Palacios, a Frontend Developer and Software Developer, with a brief overview and contact information.
