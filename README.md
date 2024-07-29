@@ -6,14 +6,14 @@
 This is my personal portfolio website showcasing my work and skills, Junior Web Developer specializing in Frontend and Software Development. The website is designed to provide a comprehensive overview of my professional background, including education, employment history, skills, projects, services, and a way to get in touch. 
 
 ## 🚀 Features
-- **🏠 Home Section**: Introduces David Palacios, a Frontend Developer and Software Developer, with a brief overview and contact information.
-- **📜 Resume Section**: Details David's education, certifications, and employment history.
-- **🔧 Skills Section**: Showcases David's proficiency in frontend and backend technologies.
+- **🏠 Home Section**: Brief overview and contact information.
+- **📜 Resume Section**: Details education, certifications, and employment history.
+- **🔧 Skills Section**: Showcases proficiency in frontend and backend technologies.
 - **🖥️ Projects Section**: Displays a portfolio of web development, mobile apps, and software development projects.
 - **🛠️ Services Section**: Lists the services offered by David, including Frontend Development, Responsive Design, Web Development, Database Development, Backend Development, and 24/7 Support.
 - **🗨️ Testimonials Section**: Features testimonials from clients and colleagues.
-- **📝 Blog Section**: Shares David's thoughts and insights on web development and environmentally conscious software principles.
-- **📬 Contact Section**: Provides a form for visitors to send messages directly to David.
+- **📝 Blog Section**: I share my thoughts and insights on web development and environmentally conscious software principles.
+- **📬 Contact Section**: Provides a form for visitors to get in contact directly to me. 
 
 ## 🛠️ Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
